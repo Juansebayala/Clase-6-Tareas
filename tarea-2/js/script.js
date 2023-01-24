@@ -11,22 +11,22 @@ $botonAgregarIntegrantes.onclick = function(event) {
 	event.preventDefault();
 }
 
-function crearElementosLabelEInputs() {
-	const nuevoDiv = document.createElement('div');
+function crearIntegrante() {
+	const $integrante = document.createElement('div');
 	const nuevoLabel = document.createElement('label');
 	const textoLabel = 'Por favor, indica el salario anual del integrante: ';
 	nuevoLabel.textContent = textoLabel;
 	const nuevoInput = document.createElement('input');
-	nuevoDiv.appendChild(nuevoLabel);
-	nuevoDiv.appendChild(nuevoInput);
-	return nuevoDiv;
+	$integrante.appendChild(nuevoLabel);
+	$integrante.appendChild(nuevoInput);
+	return $integrante;
 }
 
 function agregarElementos(cantidadAAgregar) {
 	const $nodoSalariosIntegrantes = document.querySelector('#salarios-integrantes');
 	for (let i = 0; i < cantidadAAgregar; i++) {
-		const elementos = crearElementosLabelEInputs();
-		$nodoSalariosIntegrantes.appendChild(elementos);
+		const $integrante = crearIntegrante();
+		$nodoSalariosIntegrantes.appendChild($integrante);
 	}
 }
 
