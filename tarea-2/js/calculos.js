@@ -23,8 +23,7 @@ function calcularSalarioPromedio(salarios) {
 	for (let i = 0; i < salarios.length; i++) {
 		sumaSalarios += salarios[i];
 	}
-	let promedio = sumaSalarios / salarios.length;
-	return promedio;
+	return sumaSalarios / salarios.length;
 }
 
 function convertirSalariosAnualesAMensuales(salarios) {
